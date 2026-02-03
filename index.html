@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valencia_Benedict_HTMLLab1</title>
+
+    <script>
+        window.onload = function() {
+            alert('Hello World');
+        };
+    </script>
+
+    <style>
+        :root {
+            --bg: #0f172a;
+            --card: #1e293b;
+            --accent: #818cf8;
+            --text-p: #f8fafc;
+            --text-s: #94a3b8;
+            --border: #334155;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-p);
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: var(--card);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--border);
+        }
+
+        h1 {
+            color: var(--accent);
+            font-size: 2.2rem;
+            margin-bottom: 8px;
+        }
+
+        .description {
+            color: var(--text-s);
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+
+        .list-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        
+
+        .box {
+            background: rgba(15, 23, 42, 0.3);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            transition: var(--transition);
+        }
+
+       
+        .box:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+            background: rgba(15, 23, 42, 0.5);
+        }
+
+        h3 {
+            color: var(--accent);
+            margin-top: 0;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+        }
+
+        ul, ol {
+            padding-left: 20px;
+            color: var(--text-s);
+        }
+
+       
+        li { 
+            margin-bottom: 10px; 
+            transition: var(--transition);
+            cursor: default;
+        }
+
+        li:hover {
+            transform: scale(1.05); 
+            color: var(--accent);
+            padding-left: 5px; 
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            display: inline-block;
+        }
+
+        a:hover { 
+            transform: scale(1.1); 
+            color: #fff;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 12px;
+            margin: 20px 0;
+            border: 1px solid var(--border);
+            transition: var(--transition);
+            cursor: zoom-in;
+        }
+
+
+        img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th {
+            background: #312e81;
+            padding: 12px;
+            text-align: left;
+            font-size: 0.9rem;
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-s);
+            transition: var(--transition);
+        }
+
+        tr:hover td {
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Laboratory Activity 01</h1>
+        <p class="description">An introduction to HTML5 basics, exploring document structure, semantic elements, and the DOM.</p>
+
+        <div class="list-grid">
+            <div class="box">
+                <h3>Unordered list</h3>
+                <ul>
+                    <li>Semantic Elements</li>
+                    <li>DOM Tree Structure</li>
+                    <li>Global Attributes</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h3>Ordered list</h3>
+                <ol>
+                    <li>Setup Boilerplate</li>
+                    <li>Insert Content Tags</li>
+                    <li>Review DOM Output</li>
+                </ol>
+            </div>
+        </div>
+
+        <p>Resource: <a href="https://www.w3schools.com/html/" target="_blank">W3School Html Tutorial</a></p>
+        
+        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80" alt="Workspace">
+
+        <h3>Student Information</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Course</th>
+                    <th>Year Level</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Benedict Valencia</td>
+                    <td>BS Computer Science</td>
+                    <td>2nd Year</td>
+                </tr>
+                <tr>
+                    <td>Paul Tomol</td>
+                    <td>BS Information Technology</td>
+                    <td>3rd Year</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
